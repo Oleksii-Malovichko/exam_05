@@ -19,19 +19,18 @@ class bigint
 		bigint &operator+=(const bigint &other);
 
 		bigint &operator++();
-		bigint operator++(int); // z++
-
-		bigint operator<<(const bigint &other) const;
-		bigint operator>>(const bigint &other) const;
-		bigint &operator<<=(const bigint &other);
-		bigint &operator>>=(const bigint &other);
+		bigint operator++(int); // x++
 
 		bigint operator<<(unsigned int n) const;
 		bigint operator>>(unsigned int n) const;
 		bigint &operator<<=(unsigned int n);
 		bigint &operator>>=(unsigned int n);
 
-		// compr 
+		bigint operator<<(const bigint &other) const;
+		bigint operator>>(const bigint &other) const;
+		bigint &operator<<=(const bigint &other);
+		bigint &operator>>=(const bigint &other);
+
 		bool operator==(const bigint &other) const;
 		bool operator!=(const bigint &other) const;
 		bool operator<(const bigint &other) const;
