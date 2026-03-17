@@ -1,10 +1,8 @@
-
-#ifndef BIGINT2_HPP
-#define BIGINT2_HPP
-// где есть = это reference и НЕ const
+#pragma once
 
 #include <iostream>
 #include <string>
+#include <sstream>
 
 class bigint
 {
@@ -15,39 +13,31 @@ class bigint
 		bigint(const bigint &other);
 		bigint &operator=(const bigint &other);
 
-		// addition
+		std::string getStr() const;
+
 		bigint operator+(const bigint &other) const;
 		bigint &operator+=(const bigint &other);
 
-		// incr
-		bigint &operator++(); // ++x
-		bigint operator++(int); // x++
+		bigint &operator++();
+		bigint operator++(int); // z++
 
-		// shift num
-		bigint operator<<(unsigned int n) const;
-		bigint operator>>(unsigned int n) const;
-		bigint &operator<<=(unsigned int n);
-		bigint &operator>>=(unsigned int n);
-
-		// shift obj
 		bigint operator<<(const bigint &other) const;
 		bigint operator>>(const bigint &other) const;
 		bigint &operator<<=(const bigint &other);
 		bigint &operator>>=(const bigint &other);
 
-		// compr
+		bigint operator<<(unsigned int n) const;
+		bigint operator>>(unsigned int n) const;
+		bigint &operator<<=(unsigned int n);
+		bigint &operator>>=(unsigned int n);
+
+		// compr 
 		bool operator==(const bigint &other) const;
 		bool operator!=(const bigint &other) const;
 		bool operator<(const bigint &other) const;
 		bool operator>(const bigint &other) const;
 		bool operator<=(const bigint &other) const;
 		bool operator>=(const bigint &other) const;
-
-	private:
-		std::string getStr() const;
-
 };
 
-std::ostream operator<<(std::ostream &os, const bigint &obj);
-
-#endif
+std::ostream &operator<<(std::ostream &os, const bigint &obj);

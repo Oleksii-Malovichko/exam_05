@@ -6,11 +6,11 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 14:27:41 by fatkeski          #+#    #+#             */
-/*   Updated: 2026/03/03 00:36:30 by alex             ###   ########.fr       */
+/*   Updated: 2026/03/17 16:18:15 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "bigint.hpp"
+#include "bigint2.hpp"
 
 int main(void)
 {
@@ -18,15 +18,15 @@ int main(void)
 	bigint b(21), c, d(1337), e(d);
 
 	// base test
-	std::cout << "a = " << a << std::endl;
-	std::cout << "b = " << b << std::endl;
-	std::cout << "c = " << c << std::endl;
-	std::cout << "d = " << d << std::endl;
-	std::cout << "e = " << e << std::endl;
+	std::cout << "a = " << a << std::endl; // 42
+	std::cout << "b = " << b << std::endl; // 21
+	std::cout << "c = " << c << std::endl; // 0
+	std::cout << "d = " << d << std::endl; // 1337
+	std::cout << "e = " << e << std::endl; // 1337
 
-	std::cout << "a + b = " << a + b << std::endl;
-	std::cout << "a + c = " << a + c << std::endl;
-	std::cout << "(c += a) = " << (c += a) << std::endl;
+	std::cout << "a + b = " << a + b << std::endl; // 63
+	std::cout << "a + c = " << a + c << std::endl; // 42
+	std::cout << "(c += a) = " << (c += a) << std::endl; // 42
 
 	std::cout << "b = " << b << std::endl;
 	std::cout << "++b = " << ++b << std::endl;
@@ -39,7 +39,7 @@ int main(void)
 
 	std::cout << "a = " << a << std::endl; // a = 42
 	std::cout << "d = " << d << std::endl; // d = 5348
-
+	
 	std::cout << "(d < a) = " << (d < a) << std::endl; // (d < a) = 0
 	std::cout << "(d > a) = " << (d > a) << std::endl; // (d > a) = 1
 	std::cout << "(d == d) = " << (d == d) << std::endl; // (d == d) = 1
