@@ -1,17 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   bigint.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/23 14:17:26 by fatkeski          #+#    #+#             */
-/*   Updated: 2026/03/06 05:36:10 by alex             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-
-
 #ifndef BIGINT
 #define BIGINT
 
@@ -61,7 +47,7 @@ class bigint
 		bool operator>(const bigint& other) const;
 		bool operator<=(const bigint& other) const;
 		bool operator>=(const bigint& other) const;
-
+	
 		// ~bigint();
 
 };
